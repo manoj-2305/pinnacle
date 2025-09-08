@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Autocorrect Tool</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>AI Autocorrect</h1>
+    <p>Smart spelling, grammar & fluency correction</p>
+  </header>
+
+  <main class="container">
+    <section class="input-output">
+      <!-- Input -->
+      <div class="panel fixed-box">
+        <h2>✍️ Input</h2>
+        <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+        <div class="btn-group">
+          <button id="correctBtn" class="btn primary">Correct</button>
+          <button id="clearBtn" class="btn secondary">Clear</button>
+        </div>
+      </div>
+
+      <!-- Output -->
+      <div class="panel fixed-box">
+        <h2>✅ Output</h2>
+        <div id="outputText" class="output-box">Your corrected text will appear here...</div>
+      </div>
+    </section>
+
+    <!-- History (Full Width) -->
+    <section class="history">
+      <h2>📜 Correction History</h2>
+      <div id="history" class="history-container">
+        <p class="placeholder">No history yet. Correct some text to see history here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>⚡ Built with AI · Autocorrect Tool © 2025</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
